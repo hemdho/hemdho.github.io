@@ -28,16 +28,9 @@ public class TaskController {
 	
 	@PostMapping("/tasks")
 	@ResponseStatus(value = HttpStatus.CREATED)
-	public void createTask() {
-		
-		Task task = new Task();
-		task.setName("Hemant");
-		task.setDescription("Hemant Test");
-		task.setStatus("Active");
+	public void createTask( @RequestBody Task task) {
 		task.setCreatedDate(OffsetDateTime.now());
 		task=repo.save(task);
-		System.out.println(task.getId());
-		System.out.println(" Created a task");
 	}
 	
 	@PutMapping("/tasks/{id}")

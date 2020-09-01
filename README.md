@@ -1,5 +1,4 @@
-# hemdho.github.io
-Task Management System
+# Task Management System
 
 Back end web api developed using JAVA 8 , Spring Boot 2.3.3 , H2 Database. It is very lightweight and covered spring security, etag.
 
